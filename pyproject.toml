@@ -42,3 +42,5 @@ Issues = "https://github.com/marcelloraphael/hermes-textstats/issues"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.pytest.ini_options]
+pythonpath = ["src"]
