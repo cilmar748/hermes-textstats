@@ -13,9 +13,11 @@ python -m pip install hermes-textstats
 ## Quick Start
 
 ```python
-from hermes_textstats import analyze_text
+from hermes_textstats import analyze_text, count_words
 
-summary = analyze_text("Hermes helps me build, test, and publish Python packages.")
+text = "Hermes helps me build, test, and publish Python packages."
+print(count_words(text))
+summary = analyze_text(text)
 print(summary)
 ```
 
@@ -23,6 +25,15 @@ print(summary)
 hermes-textstats "Hermes helps me build, test, and publish Python packages."
 hermes-textstats --json "Hermes helps me build, test, and publish Python packages."
 ```
+
+## API
+
+- `count_words(text)`
+- `count_sentences(text)`
+- `count_characters(text, include_spaces=True)`
+- `average_word_length(text)`
+- `estimate_reading_time(text, words_per_minute=200)`
+- `analyze_text(text)`
 
 ## Development
 
@@ -33,3 +44,4 @@ python -m build
 python -m twine check dist/*
 ```
 
+See `docs/ACCOUNT_SETUP.md` before publishing to TestPyPI, PyPI, or Telegram.

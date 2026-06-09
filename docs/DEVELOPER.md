@@ -25,3 +25,7 @@ python -m twine check dist/*
 5. Install from TestPyPI in a clean environment.
 6. Upload the same verified version to PyPI.
 
+## GitHub
+
+The planned private remote is `https://github.com/cilmar748/hermes-textstats`.
+Create it after the local implementation and package checks pass.

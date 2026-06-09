@@ -35,9 +35,9 @@ build = ["build", "twine"]
 hermes-textstats = "hermes_textstats.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/marcelloraphael/hermes-textstats"
-Source = "https://github.com/marcelloraphael/hermes-textstats"
-Issues = "https://github.com/marcelloraphael/hermes-textstats/issues"
+Homepage = "https://github.com/cilmar748/hermes-textstats"
+Source = "https://github.com/cilmar748/hermes-textstats"
+Issues = "https://github.com/cilmar748/hermes-textstats/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
