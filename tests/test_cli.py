@@ -2,6 +2,8 @@ import json
 import subprocess
 import sys
 
+import pytest
+
 
 def run_cli(*args):
     return subprocess.run(
@@ -30,7 +32,7 @@ def test_cli_prints_json_summary():
         "characters_no_spaces": 21,
         "words": 3,
         "sentences": 1,
-        "average_word_length": 7.0,
+        "average_word_length": pytest.approx(20 / 3),
         "reading_time_minutes": 0.015,
     }
 

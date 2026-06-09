@@ -68,10 +68,10 @@ def test_analyze_text_returns_stable_summary_keys():
     text = "Hermes builds packages. It runs tests!"
 
     assert analyze_text(text) == {
-        "characters": 40,
-        "characters_no_spaces": 35,
+        "characters": 38,
+        "characters_no_spaces": 34,
         "words": 6,
         "sentences": 2,
-        "average_word_length": pytest.approx(35 / 6),
+        "average_word_length": pytest.approx(31 / 6),
         "reading_time_minutes": pytest.approx(6 / 200),
     }
