@@ -19,6 +19,21 @@ hermes config set gateway.telegram.token "YOUR_BOT_TOKEN_HERE"
 hermes gateway run
 ```
 
+To run the gateway in the background with `tmux`:
+
+```bash
+tmux new-session -d -s hermes-gateway 'hermes gateway run'
+tmux has-session -t hermes-gateway && echo "Gateway running" || echo "Gateway stopped"
+tail -f ~/.hermes/logs/gateway.log
+```
+
+If the gateway gets stuck:
+
+```bash
+tmux kill-session -t hermes-gateway
+tmux new-session -d -s hermes-gateway 'hermes gateway run'
+```
+
 ## TestPyPI
 
 1. Register at <https://test.pypi.org/account/register/>.
