@@ -69,7 +69,7 @@ def test_analyze_text_returns_stable_summary_keys():
 
     assert analyze_text(text) == {
         "characters": 38,
-        "characters_no_spaces": 34,
+        "characters_no_spaces": 33,
         "words": 6,
         "sentences": 2,
         "average_word_length": pytest.approx(31 / 6),

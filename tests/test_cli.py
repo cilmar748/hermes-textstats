@@ -1,15 +1,20 @@
 import json
+import os
 import subprocess
 import sys
+from pathlib import Path
 
 import pytest
 
 
 def run_cli(*args):
+    env = os.environ.copy()
+    env["PYTHONPATH"] = str(Path(__file__).resolve().parents[1] / "src")
     return subprocess.run(
         [sys.executable, "-m", "hermes_textstats.cli", *args],
         check=False,
         capture_output=True,
+        env=env,
         text=True,
     )
 
