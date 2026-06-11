@@ -44,4 +44,15 @@ python -m build
 python -m twine check dist/*
 ```
 
+## Project Notes
+
+- [Paper notes](docs/PAPER_NOTES.md) records what I built, what Hermes helped
+  with, and what is already verified.
+- [DIVE verification](docs/DIVE_VERIFICATION.md) lists the commands to run in
+  DIVE before saying the package is verified there.
+- [Demo transcript](docs/assets/hermes-textstats-demo.txt) shows the package
+  running from the command line.
+- [Demo screencap](docs/assets/hermes-textstats-demo.png) is a screencap-style
+  image made from the real CLI output.
+
 See `docs/ACCOUNT_SETUP.md` before publishing to TestPyPI, PyPI, or Telegram.

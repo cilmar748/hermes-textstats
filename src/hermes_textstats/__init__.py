@@ -1,4 +1,11 @@
-"""Text statistics helpers for Python and the terminal."""
+"""Count simple text statistics from Python or the terminal.
+
+hermes-textstats is a small package I built while testing the Hermes Agent
+workflow for a Python package project. It takes a short text input and reports
+basic counts such as words, sentences, characters, average word length, and an
+estimated reading time. The package is meant to be easy to inspect with pydoc,
+easy to test with pytest, and easy to run from the command line.
+"""
 
 from __future__ import annotations
 
