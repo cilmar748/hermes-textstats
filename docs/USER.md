@@ -1,5 +1,11 @@
 # User Guide
 
+## What This Package Is For
+
+`hermes-textstats` is for quick checks on short text. For example, a student can
+check a reflection paragraph, a quiz explanation, a README section, or a short
+answer draft inside DIVE/JupyterHub.
+
 ## Command Line
 
 ```bash
@@ -21,6 +27,12 @@ text = "This is a short sentence."
 print(estimate_reading_time(text))
 print(analyze_text(text))
 ```
+
+## Notebook Demo
+
+Open `notebooks/demo.ipynb` to see the same package used in a notebook-style
+workflow. This is the easiest demo format for DIVE/JupyterHub because the input
+text, code, and output can stay in one place.
 
 ## Output Fields
 

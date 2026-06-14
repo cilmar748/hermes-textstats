@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="360" viewBox="0 0 980 360" role="img" aria-labelledby="title desc">
+  <title id="title">Hermes textstats workflow</title>
+  <desc id="desc">Diagram showing DIVE and Hermes Agent helping create, test, document, and publish hermes-textstats.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .box { fill: #ffffff; stroke: #334155; stroke-width: 2; rx: 10; }
+      .main { fill: #0f172a; font: 700 18px Arial, sans-serif; }
+      .sub { fill: #475569; font: 14px Arial, sans-serif; }
+      .arrow { stroke: #2563eb; stroke-width: 3; fill: none; marker-end: url(#arrowhead); }
+      .label { fill: #1e3a8a; font: 700 13px Arial, sans-serif; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#2563eb" />
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="980" height="360" />
+
+  <rect class="box" x="40" y="80" width="170" height="105" />
+  <text class="main" x="125" y="120" text-anchor="middle">DIVE</text>
+  <text class="sub" x="125" y="148" text-anchor="middle">JupyterHub /</text>
+  <text class="sub" x="125" y="168" text-anchor="middle">course environment</text>
+
+  <rect class="box" x="270" y="80" width="170" height="105" />
+  <text class="main" x="355" y="116" text-anchor="middle">Hermes Agent</text>
+  <text class="sub" x="355" y="146" text-anchor="middle">helps plan, code,</text>
+  <text class="sub" x="355" y="166" text-anchor="middle">test, and document</text>
+
+  <rect class="box" x="500" y="80" width="170" height="105" />
+  <text class="main" x="585" y="116" text-anchor="middle">Git</text>
+  <text class="sub" x="585" y="146" text-anchor="middle">small commits and</text>
+  <text class="sub" x="585" y="166" text-anchor="middle">review checkpoints</text>
+
+  <rect class="box" x="730" y="80" width="200" height="105" />
+  <text class="main" x="830" y="116" text-anchor="middle">hermes-textstats</text>
+  <text class="sub" x="830" y="146" text-anchor="middle">Python package, CLI,</text>
+  <text class="sub" x="830" y="166" text-anchor="middle">tests, and docs</text>
+
+  <rect class="box" x="500" y="235" width="170" height="80" />
+  <text class="main" x="585" y="268" text-anchor="middle">Verification</text>
+  <text class="sub" x="585" y="294" text-anchor="middle">pytest, build, twine</text>
+
+  <rect class="box" x="730" y="235" width="200" height="80" />
+  <text class="main" x="830" y="268" text-anchor="middle">TestPyPI / PyPI</text>
+  <text class="sub" x="830" y="294" text-anchor="middle">publish after token upload</text>
+
+  <path class="arrow" d="M210 132 L270 132" />
+  <path class="arrow" d="M440 132 L500 132" />
+  <path class="arrow" d="M670 132 L730 132" />
+  <path class="arrow" d="M830 185 L830 235" />
+  <path class="arrow" d="M730 275 L670 275" />
+  <path class="arrow" d="M670 275 L730 275" />
+
+  <text class="label" x="240" y="116" text-anchor="middle">work in</text>
+  <text class="label" x="470" y="116" text-anchor="middle">checkpoint</text>
+  <text class="label" x="700" y="116" text-anchor="middle">produce</text>
+  <text class="label" x="710" y="258" text-anchor="middle">passes</text>
+</svg>
