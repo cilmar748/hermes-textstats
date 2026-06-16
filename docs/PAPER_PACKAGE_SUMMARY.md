@@ -34,7 +34,11 @@ does directly, so a user can understand the purpose before opening the code.
 
 ## Current Status
 
-The package has passing local tests, builds into wheel and source distribution
-files, and passes `twine check`. The next publishing step is uploading the
-current `0.1.0` release to TestPyPI with a private TestPyPI API token, then
-installing it back from TestPyPI to verify the published package.
+The package is published on real PyPI as version `0.1.0`:
+
+https://pypi.org/project/hermes-textstats/0.1.0/
+
+Before publishing, the package passed local tests, built into wheel and source
+distribution files, and passed `twine check`. After publishing, I verified a
+clean install from PyPI and confirmed that both Python import and the
+`hermes-textstats` command-line interface work.

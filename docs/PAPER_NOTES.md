@@ -44,11 +44,14 @@ These checks have passed on my local machine:
 - `python -m build` created the wheel and source distribution.
 - `twine check dist/*` passed for both distribution files.
 
-## What Still Needs Tokens
+## PyPI Publication
 
-The package is built locally and ready for TestPyPI/PyPI upload, but it is not
-uploaded yet. Uploading needs private TestPyPI and PyPI API tokens. Those tokens
-should not be saved in git.
+The package is published on real PyPI as version `0.1.0`:
+
+https://pypi.org/project/hermes-textstats/0.1.0/
+
+After publishing, I installed it back from PyPI in a clean temporary environment
+and verified that both the Python import and command-line interface work.
 
 ## Connection to DIVE
 

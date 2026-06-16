@@ -29,6 +29,8 @@ Example use cases:
 python -m pip install hermes-textstats
 ```
 
+Published package: https://pypi.org/project/hermes-textstats/0.1.0/
+
 ## Quick Start
 
 ```python
@@ -80,4 +82,5 @@ python -m twine check dist/*
 - [Workflow diagram](docs/assets/hermes-textstats-workflow.svg) shows how DIVE,
   Hermes Agent, git, tests, docs, and TestPyPI/PyPI connect.
 
-See `docs/ACCOUNT_SETUP.md` before publishing to TestPyPI, PyPI, or Telegram.
+See `docs/ACCOUNT_SETUP.md` for the account/token steps used for TestPyPI,
+PyPI, and Telegram setup.
