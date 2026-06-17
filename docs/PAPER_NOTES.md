@@ -2,8 +2,8 @@
 
 ## One-line Summary
 
-`hermes-textstats` is a small Python package for checking basic text statistics
-from Python, the terminal, or a notebook.
+`hermes-textstats` is a DIVE-ready Python package that turns short text into
+clear statistics from Python, the terminal, or a notebook.
 
 ## Short Description
 

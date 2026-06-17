@@ -1,8 +1,7 @@
 # hermes-textstats
 
-`hermes-textstats` is a small Python package for text statistics. It provides
-importable functions and a command-line interface for word counts, sentence
-counts, character counts, average word length, and reading-time estimates.
+`hermes-textstats` is a DIVE-ready Python package that turns short text into
+clear statistics from Python, the terminal, or a notebook.
 
 The name connects the package to the Hermes Agent workflow used in the course.
 The package itself is intentionally small: it gives students a concrete package
@@ -77,6 +76,8 @@ python -m twine check dist/*
   notebook-style workflow.
 - [Demo transcript](docs/assets/hermes-textstats-demo.txt) shows the package
   running from the command line.
+- [Showcase screencap](docs/assets/hermes-textstats-showcase.png) is the
+  compact visual for grant/paper updates.
 - [Demo screencap](docs/assets/hermes-textstats-demo.png) is a screencap-style
   image made from the real CLI output.
 - [Workflow diagram](docs/assets/hermes-textstats-workflow.svg) shows how DIVE,

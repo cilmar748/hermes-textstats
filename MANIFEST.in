@@ -1,3 +1,4 @@
 include SPEC.md
 recursive-include docs *.md *.png *.svg *.txt
 recursive-include notebooks *.ipynb
+recursive-include scripts *.py

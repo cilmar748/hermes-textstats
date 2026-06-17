@@ -2,18 +2,27 @@
 
 ## One-line Summary
 
-`hermes-textstats` is a small Python package for checking basic text statistics
-from Python, the terminal, or a notebook.
+`hermes-textstats` is a DIVE-ready Python package that turns short text into
+clear statistics from Python, the terminal, or a notebook.
 
 ## Motivation and Use Cases
 
 I built this package as a concrete example of using Hermes Agent with git to
 create a Python package that can be tested, documented, and published. The use
-case is simple on purpose: a student working in DIVE/JupyterHub can paste a
-short paragraph from an assignment, quiz explanation, README file, or reflection
-and get word count, sentence count, character count, average word length, and
-estimated reading time. This gives the project a real package output while also
-showing the steps of the agentic coding workflow.
+case is simple on purpose but easy to explain: a student working in
+DIVE/JupyterHub can paste a short paragraph from an assignment, quiz
+explanation, README file, or reflection and immediately see word count, sentence
+count, character count, average word length, and estimated reading time. This
+gives the grant/paper a concrete student output, not only a description of an
+agent workflow.
+
+## Achievements
+
+- Published `hermes-textstats` version `0.1.0` on real PyPI.
+- Verified clean install from PyPI.
+- Verified both Python import and command-line usage.
+- Added tests, user guide, developer guide, DIVE verification notes, paper
+  notes, notebook demo, CLI screencap, and workflow diagram.
 
 ## Package Name
 
@@ -24,12 +33,14 @@ does directly, so a user can understand the purpose before opening the code.
 ## Demo Evidence
 
 - CLI demo transcript: `docs/assets/hermes-textstats-demo.txt`
+- Compact showcase screencap: `docs/assets/hermes-textstats-showcase.png`
 - CLI screencap-style image: `docs/assets/hermes-textstats-demo.png`
 - Workflow diagram: `docs/assets/hermes-textstats-workflow.svg`
 - Notebook demo: `notebooks/demo.ipynb`
 
-## Visual Diagram
+## Visuals
 
+![Hermes textstats showcase](assets/hermes-textstats-showcase.png)
 ![Hermes textstats workflow](assets/hermes-textstats-workflow.svg)
 
 ## Current Status

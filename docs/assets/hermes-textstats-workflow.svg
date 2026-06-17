@@ -42,7 +42,7 @@
 
   <rect class="box" x="730" y="235" width="200" height="80" />
   <text class="main" x="830" y="268" text-anchor="middle">TestPyPI / PyPI</text>
-  <text class="sub" x="830" y="294" text-anchor="middle">publish after token upload</text>
+  <text class="sub" x="830" y="294" text-anchor="middle">published and verified</text>
 
   <path class="arrow" d="M210 132 L270 132" />
   <path class="arrow" d="M440 132 L500 132" />
