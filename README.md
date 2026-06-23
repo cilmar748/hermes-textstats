@@ -1,7 +1,7 @@
 # hermes-textstats
 
-`hermes-textstats` is a DIVE-ready Python package that turns short text into
-clear statistics from Python, the terminal, or a notebook.
+`hermes-textstats` is a DIVE-ready Python package that turns short text, files,
+and notebook drafts into clear writing statistics.
 
 The name connects the package to the Hermes Agent workflow used in the course.
 The package itself is intentionally small: it gives students a concrete package
@@ -13,7 +13,8 @@ When I write short text for assignments, quiz explanations, README files, or
 project reflections, I sometimes want quick feedback about length without
 opening another tool. This package gives a simple example: a student can paste a
 paragraph into Python, a notebook, or the terminal and immediately see word
-count, sentence count, character count, and estimated reading time.
+count, sentence count, paragraph count, lexical diversity, longest sentence
+length, character count, and estimated reading time.
 
 Example use cases:
 
@@ -28,7 +29,7 @@ Example use cases:
 python -m pip install hermes-textstats
 ```
 
-Published package: https://pypi.org/project/hermes-textstats/0.1.0/
+Published package: https://pypi.org/project/hermes-textstats/
 
 ## Quick Start
 
@@ -44,16 +45,22 @@ print(summary)
 ```bash
 hermes-textstats "Hermes helps me build, test, and publish Python packages."
 hermes-textstats --json "Hermes helps me build, test, and publish Python packages."
+hermes-textstats --report "Hermes helps me build, test, and publish Python packages."
+hermes-textstats --file reflection.txt
 ```
 
 ## API
 
 - `count_words(text)`
 - `count_sentences(text)`
+- `count_paragraphs(text)`
 - `count_characters(text, include_spaces=True)`
 - `average_word_length(text)`
 - `estimate_reading_time(text, words_per_minute=200)`
+- `longest_sentence_length(text)`
+- `lexical_diversity(text)`
 - `analyze_text(text)`
+- `format_markdown_report(text)`
 
 ## Development
 

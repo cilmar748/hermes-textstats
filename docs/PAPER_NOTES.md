@@ -2,8 +2,8 @@
 
 ## One-line Summary
 
-`hermes-textstats` is a DIVE-ready Python package that turns short text into
-clear statistics from Python, the terminal, or a notebook.
+`hermes-textstats` is a DIVE-ready Python package that turns short text, files,
+and notebook drafts into clear writing statistics.
 
 ## Short Description
 
@@ -11,8 +11,9 @@ The package solves a simple problem: a student working in DIVE/JupyterHub can
 paste a short paragraph from an assignment, quiz explanation, README file, or
 reflection and get useful text counts without writing a longer script. It can
 count words, sentences, characters with and without spaces, average word length,
-and estimated reading time. It can be used from Python, from the terminal, or in
-a notebook demo.
+paragraphs, longest sentence length, lexical diversity, and estimated reading
+time. It can be used from Python, from the terminal, from a text file, or in a
+notebook demo.
 
 ## What I Built
 

@@ -4,9 +4,13 @@ from hermes_textstats import (
     analyze_text,
     average_word_length,
     count_characters,
+    count_paragraphs,
     count_sentences,
     count_words,
     estimate_reading_time,
+    format_markdown_report,
+    lexical_diversity,
+    longest_sentence_length,
 )
 
 
@@ -27,6 +31,12 @@ def test_count_sentences_handles_common_end_marks():
     assert count_sentences(text) == 3
 
 
+def test_count_sentences_does_not_split_version_numbers():
+    text = "Version 0.1.1 is ready. It adds file input."
+
+    assert count_sentences(text) == 2
+
+
 def test_count_sentences_treats_unpunctuated_text_as_one_sentence():
     assert count_sentences("Hermes can read short text") == 1
 
@@ -34,6 +44,12 @@ def test_count_sentences_treats_unpunctuated_text_as_one_sentence():
 def test_count_sentences_returns_zero_for_empty_text():
     assert count_sentences("") == 0
     assert count_sentences("   ") == 0
+
+
+def test_count_paragraphs_counts_non_empty_blocks():
+    text = "First paragraph.\n\nSecond paragraph has two lines.\nStill second.\n\n  \nThird."
+
+    assert count_paragraphs(text) == 3
 
 
 def test_count_characters_can_include_or_exclude_spaces():
@@ -64,6 +80,18 @@ def test_estimate_reading_time_rejects_non_positive_rate():
         estimate_reading_time("some text", words_per_minute=0)
 
 
+def test_longest_sentence_length_returns_largest_sentence_word_count():
+    text = "Short sentence. Hermes helps students publish packages from DIVE!"
+
+    assert longest_sentence_length(text) == 7
+
+
+def test_lexical_diversity_uses_case_insensitive_unique_words():
+    text = "Hermes helps Hermes students"
+
+    assert lexical_diversity(text) == pytest.approx(3 / 4)
+
+
 def test_analyze_text_returns_stable_summary_keys():
     text = "Hermes builds packages. It runs tests!"
 
@@ -72,6 +100,18 @@ def test_analyze_text_returns_stable_summary_keys():
         "characters_no_spaces": 33,
         "words": 6,
         "sentences": 2,
+        "paragraphs": 1,
         "average_word_length": pytest.approx(31 / 6),
         "reading_time_minutes": pytest.approx(6 / 200),
+        "longest_sentence_words": 3,
+        "lexical_diversity": pytest.approx(1.0),
     }
+
+
+def test_format_markdown_report_returns_readable_table():
+    report = format_markdown_report("Hermes builds packages.")
+
+    assert report.startswith("# Text Statistics Report")
+    assert "| Words | 3 |" in report
+    assert "| Sentences | 1 |" in report
+    assert "| Lexical diversity | 1.00 |" in report

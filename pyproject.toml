@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hermes-textstats"
-version = "0.1.0"
-description = "Small text statistics helpers for Python and the terminal"
+version = "0.1.1"
+description = "DIVE-ready text statistics helpers for Python, notebooks, and the terminal"
 readme = "README.md"
 requires-python = ">=3.9"
 license = "MIT"

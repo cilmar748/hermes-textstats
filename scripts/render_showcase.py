@@ -79,13 +79,13 @@ def main() -> None:
 
     # Header
     text(draw, (80, 56), "Hermes TextStats", 74, INK, True)
-    text(draw, (84, 142), "A DIVE-ready Python package that turns short text into clear statistics.", 34, MUTED)
+    text(draw, (84, 142), "A DIVE-ready Python package for short text, files, and notebook drafts.", 34, MUTED)
 
     x = 84
     for label, color in [
-        ("PyPI v0.1.0", BLUE),
-        ("14 tests passed", GREEN),
-        ("CLI + Python + Notebook", CYAN),
+        ("v0.1.1 ready", BLUE),
+        ("22 tests passed", GREEN),
+        ("CLI + File + Report", CYAN),
     ]:
         x += pill(draw, (x, 210), label, color) + 18
 
@@ -96,9 +96,9 @@ def main() -> None:
 
     steps = [
         ("1", "Build", "src layout, CLI, public API", BLUE),
-        ("2", "Verify", "pytest, build, twine, clean install", GREEN),
+        ("2", "Improve", "file input, Markdown report, writing metrics", GREEN),
         ("3", "Document", "user guide, developer guide, paper notes", CYAN),
-        ("4", "Publish", "TestPyPI first, then real PyPI", AMBER),
+        ("4", "Publish", "PyPI release with verified install", AMBER),
     ]
     y = 470
     for number, title, desc, color in steps:
@@ -111,28 +111,30 @@ def main() -> None:
     # Right terminal/demo card
     rounded(draw, (750, 310, 1520, 780), TERMINAL, "#1f2937")
     text(draw, (790, 350), "Published package demo", 38, "#f8fafc", True)
-    text(draw, (790, 405), "$ pip install hermes-textstats", 26, TERMINAL_TEXT)
-    text(draw, (790, 450), "$ hermes-textstats \"Hermes helps students ...\"", 26, TERMINAL_TEXT)
+    text(draw, (790, 405), "$ pip install hermes-textstats==0.1.1", 26, TERMINAL_TEXT)
+    text(draw, (790, 450), "$ hermes-textstats --report --file reflection.txt", 26, TERMINAL_TEXT)
 
     output = [
         f"Characters: {stats['characters']}",
-        f"Characters without spaces: {stats['characters_no_spaces']}",
         f"Words: {stats['words']}",
         f"Sentences: {stats['sentences']}",
+        f"Paragraphs: {stats['paragraphs']}",
+        f"Longest sentence: {stats['longest_sentence_words']} words",
         f"Average word length: {stats['average_word_length']:.2f}",
+        f"Lexical diversity: {stats['lexical_diversity']:.2f}",
         f"Reading time: {stats['reading_time_minutes']:.2f} minutes",
     ]
-    y = 515
+    y = 500
     for line in output:
-        text(draw, (820, y), line, 29, "#e5e7eb")
-        y += 42
+        text(draw, (820, y), line, 23, "#e5e7eb")
+        y += 33
 
     # Bottom proof strip
     draw.rounded_rectangle((80, 812, 1520, 858), radius=23, fill="#e0f2fe")
     centered(
         draw,
         (80, 812, 1520, 858),
-        "Published on PyPI: https://pypi.org/project/hermes-textstats/0.1.0/",
+        "PyPI: https://pypi.org/project/hermes-textstats/",
         26,
         "#075985",
         True,

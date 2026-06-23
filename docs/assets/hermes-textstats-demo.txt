@@ -3,5 +3,23 @@ Characters: 56
 Characters without spaces: 49
 Words: 8
 Sentences: 1
+Paragraphs: 1
+Longest sentence: 8 words
 Average word length: 6.00
+Lexical diversity: 1.00
 Reading time: 0.04 minutes
+
+$ PYTHONPATH=src python3 -m hermes_textstats.cli --report "Hermes helps students publish Python packages from DIVE."
+# Text Statistics Report
+
+| Metric | Value |
+| --- | ---: |
+| Characters | 56 |
+| Characters without spaces | 49 |
+| Words | 8 |
+| Sentences | 1 |
+| Paragraphs | 1 |
+| Longest sentence | 8 words |
+| Average word length | 6.00 |
+| Lexical diversity | 1.00 |
+| Reading time | 0.04 minutes |
